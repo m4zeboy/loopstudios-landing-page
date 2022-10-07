@@ -2,43 +2,36 @@ footer.app-footer {
   font-family: 'Alata', sans-serif;
   background-color: #222;
   padding: 4rem 0;
-  a, p {
-    color: white;
+  .content-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
   p {
-    opacity: .6;
-  }
-  header.footer-header {
-    margin-bottom: 2rem;
-  }
-  header.footer-header,
-  header.footer-header ul,
-  footer.footer-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  footer.footer-footer {
-    nav.nav-footer ul {
-      gap: 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    
-    }
-
-   
+    color: white;
   }
 }
 
-#mobile-footer, #mobile-footer ul{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 1rem;
+.social-media {
+  width: 100%;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
 
-} 
+.nav-footer {
+  ul {
+    display: flex;
+    gap: 1rem;
+    li {
+      a {
+        color: #aeaeae;
+        text-decoration: none;
+      }
+    }
+  }
+}

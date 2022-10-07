@@ -1,97 +1,98 @@
 import React from 'react'
 import { Container } from '../Container'
-
 import logo from '../../assets/images/logo.svg'
-import facebook from '../../assets/images/icon-facebook.svg'
-import instagram from '../../assets/images/icon-instagram.svg'
-import pinterest from '../../assets/images/icon-pinterest.svg'
-import twitter from '../../assets/images/icon-twitter.svg'
 import './style.scss'
-import { DesktopOnly } from '../DesktopOnly'
-import { MobileOnly } from '../MobileOnly'
+
+const socialMediaIconsData = [
+  {
+    title: 'Facebook',
+    src: 'src/assets/images/icon-facebook.svg',
+  },
+  {
+    title: 'Instagram',
+    src: 'src/assets/images/icon-instagram.svg',
+  },
+  {
+    title: 'Pinterest',
+    src: 'src/assets/images/icon-pinterest.svg',
+  },
+  {
+    title: 'Twitter',
+    src: 'src/assets/images/icon-twitter.svg',
+  },
+]
+
+const paginationData = [
+  {
+    title: 'About',
+    href: '#',
+  },
+  {
+    title: 'Careers',
+    href: '#',
+  },
+  {
+    title: 'Events',
+    href: '#',
+  },
+  {
+    title: 'Products',
+    href: '#',
+  },
+  {
+    title: 'Support',
+    href: '#',
+  },
+]
+
+const SocialMedia = ({ data }) => {
+  return (
+    <Container className="social-media">
+      <ul>
+        {data.map((icon) => {
+          return (
+            <li>
+              <a href="#">
+                <img
+                  src={icon.src}
+                  alt={icon.title + ' icon'}
+                  title={icon.title + ' icon'}
+                />
+              </a>
+            </li>
+          )
+        })}
+      </ul>
+    </Container>
+  )
+}
+
+const NavFooter = ({ data }) => {
+  return (
+    <nav className="nav-footer">
+      <ul>
+        {data.map((page) => {
+          return (
+            <li>
+              <a href={page.href}>{page.title}</a>
+            </li>
+          )
+        })}
+      </ul>
+    </nav>
+  )
+}
 
 export function Footer() {
   return (
     <footer className="app-footer">
       <Container>
-        <DesktopOnly>
-          <header className="footer-header">
-            <img src={logo} alt="" />
-            <ul>
-              <li>
-                <img src={facebook} alt="" />
-              </li>
-              <li>
-                <img src={instagram} alt="" />
-              </li>
-              <li>
-                <img src={pinterest} alt="" />
-              </li>
-              <li>
-                <img src={twitter} alt="" />
-              </li>
-            </ul>
-          </header>
-          <footer className="footer-footer">
-            <nav className="nav-footer">
-              <ul>
-                <li>
-                  <a href="#">About</a>
-                </li>
-                <li>
-                  <a href="#">Careers</a>
-                </li>
-                <li>
-                  <a href="#">Events</a>
-                </li>
-                <li>
-                  <a href="#">Products</a>
-                </li>
-                <li>
-                  <a href="#">Support</a>
-                </li>
-              </ul>
-            </nav>
-            <p>&copy; 2022 Loopstudios. All rights reserved.</p>
-          </footer>
-        </DesktopOnly>
-        <MobileOnly>
-          <div id="mobile-footer">
-            <img src={logo} alt="" />
-            <ul>
-              <li>
-                <img src={facebook} alt="" />
-              </li>
-              <li>
-                <img src={instagram} alt="" />
-              </li>
-              <li>
-                <img src={pinterest} alt="" />
-              </li>
-              <li>
-                <img src={twitter} alt="" />
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <a href="#">About</a>
-              </li>
-              <li>
-                <a href="#">Careers</a>
-              </li>
-              <li>
-                <a href="#">Events</a>
-              </li>
-              <li>
-                <a href="#">Products</a>
-              </li>
-              <li>
-                <a href="#">Support</a>
-              </li>
-            </ul>
-            <p>&copy; 2022 Loopstudios. All rights reserved.</p>
-          </div>
-        </MobileOnly>
+        <div className="content-footer">
+          <img src={logo} alt="Loopstudios logo" />
+          <SocialMedia data={socialMediaIconsData} />
+          <NavFooter data={paginationData} />
+          <p>&copy;All rights reserved. Loopstudios 2022.</p>
+        </div>
       </Container>
     </footer>
   )
