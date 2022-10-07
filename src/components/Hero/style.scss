@@ -46,6 +46,7 @@
   }
 
   #hero-title {
+    border-radius: 6px;
     position: relative;
     z-index: 2;
     border: 2px solid white;
@@ -86,6 +87,10 @@
               font-size: 2rem;
               font-weight: 300;
               text-decoration: none;
+              transition: all .15s;
+              &:hover {
+                color: white;
+              }
             }
           }
         }
