@@ -5,3 +5,18 @@ button {
   background: none;
   border: none;
 }
+
+.outline {
+  background: transparent;
+  border: 1px solid black;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.4rem;
+  padding: 1.2rem 3.2rem;
+  transition: ease-in-out .1s;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}

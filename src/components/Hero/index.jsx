@@ -21,7 +21,7 @@ const ModalHero = ({ controls }) => {
           <button className="glass" onClick={() => controls.setModal(!controls.modal)}><img src={close} alt="close icon" title="Clique para fechar o modal" /></button>
         </header>
         <nav>
-          <ul style={{ display: "flex", flexDirection: "column", gap: "3.2rem"}}>{links.map(link => <li><a href="#" style={{ fontFamily: "Josefin Sans", textTransform: "uppercase", fontSize: "24px"}}>{link}</a></li>)}</ul>
+          <ul style={{ display: "flex", flexDirection: "column", gap: "3.2rem"}}>{links.map(link => <li><a href="#" style={{ fontFamily: "Josefin Sans", textTransform: "uppercase", fontSize: "24px",}}>{link}</a></li>)}</ul>
         </nav>
       </Container>
     </div>
