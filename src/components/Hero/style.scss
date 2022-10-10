@@ -1,109 +1,67 @@
 #hero {
+  padding: 6.4rem 0 14.4rem;
   position: relative;
-  justify-content: space-between;
-  background: url('../../assets/images/desktop/image-hero.jpg') center top/cover 
-  no-repeat;
-  min-height: 650px;
+  overflow: hidden;
   &::after {
     content: '';
-    position: absolute;
     width: 100%;
     height: 100%;
+    position: absolute;
     background-color: rgba(0, 0, 0, 0.40);
     top: 0;
-    left: 0;
+    z-index: 1;
   }
-  header.hero-header {
+  nav {
     position: relative;
     z-index: 2;
-    padding: 4rem 0;
-    div.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12.8rem;
+    ul {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-    }
-    nav {
-      ul {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        li {
-          font-size: 18px;
-          a {
-            display: flex;
-            align-items: center;
-            color: white;
-            text-decoration: none;
-            &:hover {
-              text-decoration: underline;
-            }
-          }
+      gap: 3.2rem;
+      li {
+        padding: 0 0 1rem;
+        border-bottom: 1px solid transparent;
+        transition: ease-in-out .1s;
+        &:hover {
+          border-bottom: 1px solid white;
         }
       }
     }
   }
-
-  #hero-title {
-    border-radius: 6px;
+  .title {
     position: relative;
     z-index: 2;
+    max-width: 65rem;
+    color: white;
+    padding: 4rem;
     border: 2px solid white;
-    padding: 2rem;
-    max-width: 768px;
-    h1 {
-      text-transform: uppercase;
-      color: white;
-      font-weight: 300;
-    }
-  }
-
-  .modal {
-    position: fixed;
-    z-index: 3;
-    background-color: rgba(0, 0, 0, 0.80);
-    backdrop-filter: blur(40px);
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    header.modal-header, main.modal-main {
-      padding: 4rem 2rem;
-    }
-    header.modal-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    main.modal-main {
-      nav {
-        ul {
-          li {
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-            a {
-              color: rgba(255, 255, 255, 0.75);
-              font-size: 2rem;
-              font-weight: 300;
-              text-decoration: none;
-              transition: all .15s;
-              &:hover {
-                color: white;
-              }
-            }
-          }
-        }
-      }
-
-    }
-    
   }
 }
 
-@media (max-width: 1024px) {
+#modal-hero {
+  position: fixed; 
+  z-index: 5;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000;
+  padding: 4rem 0;
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
   #hero {
-    height: 768px;
-    
+    padding: 4rem 0 22.5rem;
+    nav {
+      margin-bottom: 16.2rem;
+    }
   }
 }
