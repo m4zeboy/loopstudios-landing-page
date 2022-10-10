@@ -36,6 +36,11 @@ p,a {
   font-family: 'Alata', sans-serif;
 } 
 
+p {
+  line-height: 25px;
+  color: #888;
+}
+
 ul {
   list-style: none;
   padding-inline-start: 0;
@@ -45,8 +50,9 @@ ul {
   }
 }
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: 6.4rem;
-  }
+main {
+  padding: 16rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18.5rem;
 }

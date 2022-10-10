@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 12.8rem;
+    margin-bottom: 16.2rem;
     ul {
       display: flex;
       gap: 3.2rem;
@@ -34,7 +34,7 @@
   .title {
     position: relative;
     z-index: 2;
-    max-width: 65rem;
+    max-width: 70rem;
     color: white;
     padding: 4rem;
     border: 2px solid white;
@@ -57,11 +57,16 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #hero {
     padding: 4rem 0 22.5rem;
     nav {
       margin-bottom: 16.2rem;
+    }
+    .title {
+      h1 {
+        font-size: 5.6rem;
+      }
     }
   }
 }

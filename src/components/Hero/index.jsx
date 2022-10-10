@@ -6,9 +6,9 @@ import close from '../../assets/images/icon-close.svg'
 
 import hero from '../../assets/images/desktop/image-hero.jpg';
 
-import './style.scss'
 import { DesktopOnly } from "../DesktopOnly";
 import { MobileOnly } from "../MobileOnly";
+import './style.scss'
 
 const links = ['About', 'Careers', 'Events', 'Products', 'Support'];
 
@@ -51,7 +51,7 @@ export function Hero() {
             </MobileOnly>
           </nav>
           <div className="title">
-            <h1>IMMERSIVE EXPERIENCE THAT DELIVER</h1>
+            <h1>IMMERSIVE EXPERIENCES THAT DELIVER</h1>
           </div>
         </Container>
       </header>
